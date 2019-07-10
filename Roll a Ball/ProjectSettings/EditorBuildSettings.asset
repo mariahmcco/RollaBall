@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/minigame.unity
     guid: 3a70eb94d05b21641886d2c199c50470
+  - enabled: 1
+    path: Assets/Scenes/Challenge.unity
+    guid: ac09480cacf9f8049aedc8b909aaebd0
+  - enabled: 1
+    path: Assets/Scenes/Challenge2.unity
+    guid: 8c9dad6851fc9da4fb889bed54af1ea0
   m_configObjects: {}

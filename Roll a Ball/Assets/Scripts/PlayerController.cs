@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private int count;
+    private int score;
+    public Text scoreText;
+
 
     void Start ()
     {
@@ -41,14 +45,25 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
             setCountText ();
         }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.SetActive (false);
+            count = count - 1;
+            setCountText ();
+        }
+
     }
 
     void setCountText ()
     {
         countText.text = "Count: " + count.ToString ();
-        if (count >= 11)
+        if (count >= 10)
         {
             winText.text = "You Win!";
+            SceneManager.LoadScene( 1);
         }
+
     }
+  
 }
